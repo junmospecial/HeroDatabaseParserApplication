@@ -1,0 +1,27 @@
+.privacy-policy-container {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.policy-section {
+    margin-bottom: 20px;
+}
+
+.policy-section h2 {
+    margin-bottom: 10px;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}

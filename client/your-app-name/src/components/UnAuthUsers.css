@@ -1,0 +1,68 @@
+.public-list-details {
+    display: block; /* Ensure this is not set to 'none' */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.hero-details {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.list-reviews {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-reviews h4 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.average-rating {
+
+    color: black
+}
+
+.review {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.review p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Assuming these elements have specific class names in your React component */
+
+.list-name, .creator, .created-at, .last-updated {
+    color: #000000; /* This is the color code for black */
+}
+
+/* If they are not individually classed, you can target them as children of a specific parent class */
+
+.public-list h3, /* For listName */
+.public-list .creator, /* Add this class in your component for the creator */
+.public-list .created-at, /* Add this class in your component for createdAt */
+.public-list .last-updated /* Add this class in your component for lastUpdated */
+{
+    color: #000000;
+}

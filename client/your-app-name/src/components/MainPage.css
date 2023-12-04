@@ -1,0 +1,118 @@
+
+/* MainPage.css */
+
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+/* Global Resets */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #151719; /* Dark background for the body */
+  background-image: url('comic-background.jpg'); /* Direct reference as it's in the same directory */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Arial', sans-serif; /* Keep your existing font as a fallback */
+  color: #fff; /* White text color for better readability on dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+} 
+
+/* Waviy Animation */
+.waviy {
+  pointer-events: none;
+  position: relative;
+  font-size: 50px;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2)); /* Adjust or remove this line */
+}
+
+
+.waviy span {
+  pointer-events: none;
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #151719;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+
+.main-container {
+  pointer-events: auto;
+  background-color: #f0f8ff; /* Soft blue background */
+  color: #333; /* Dark grey text for contrast */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+  position: relative; /* Make sure your content is positioned above the background */
+  z-index: 1; /* Higher than the background */
+}
+
+h1 {
+  color: #1a1a1a;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  
+}
+
+.no-account-text {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+a:hover, a:focus {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.link-separator {
+  pointer-events: none;
+  color: #333; /* Same color as the text for consistency */
+  padding: 0 10px; /* Spacing around the separator */
+}
+
+.main-link {
+  pointer-events: auto;
+  position: relative;
+  z-index: 10; /* This should be higher than any other z-index values in your CSS */
+}

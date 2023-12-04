@@ -1,0 +1,46 @@
+.await-verify-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.await-verify-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 2s;
+}
+
+.await-verify-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

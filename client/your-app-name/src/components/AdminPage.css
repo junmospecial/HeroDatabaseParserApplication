@@ -1,0 +1,196 @@
+/* AdminPage.css */
+.admin-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* AdminPage.css */
+
+.user-container {
+    background-color: #e3f2fd; /* Light blue background */
+    color: #333; /* Dark text for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between each user container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.user-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.user-detail {
+    margin-bottom: 10px;
+}
+
+.user-detail strong {
+    font-weight: bold;
+    color: #0275d8; /* Blue color for detail labels */
+}
+
+.user-actions {
+    display: flex;
+    justify-content: space-around; /* Evenly space buttons */
+    margin-top: 20px;
+}
+
+.user-actions button {
+    background-color: #5bc0de; /* Bootstrap info color */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-actions button:hover {
+    background-color: #31b0d5; /* Darker shade on hover */
+}
+
+.admin-container h1 {
+    text-align: center;
+    color: #0d6efd;
+}
+.list-name, .creator, .created-at, .last-updated {
+    color: #000000; /* This is the color code for black */
+}
+
+/* If they are not individually classed, you can target them as children of a specific parent class */
+
+.public-list h3, /* For listName */
+.public-list .creator, /* Add this class in your component for the creator */
+.public-list .created-at, /* Add this class in your component for createdAt */
+.public-list .last-updated /* Add this class in your component for lastUpdated */
+{
+    color: #000000;
+}
+.logout-button, .toggle-button, .toggle-details-btn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover, .toggle-button:hover, .toggle-details-btn:hover {
+    background-color: #0b5ed7;
+}
+
+.user-list, .public-list {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.user-list div, .public-list div {
+    margin-bottom: 5px;
+}
+
+.hero-finder-container {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hero {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.hero-name {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.hero-details {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.hero-details.show {
+    display: block;
+}
+
+.review, .average-rating {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #198754;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #157347;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-button, .back-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover, .back-button:hover {
+    background-color: #5c636a;
+}
+
+
+.normal-user-button {
+    background-color: #28a745; /* Green color, you can choose any */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.normal-user-button:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+} 
