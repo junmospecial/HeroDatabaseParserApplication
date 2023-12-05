@@ -16,7 +16,7 @@ function Signup() {
     setErrorMessage(''); // Clear any existing error messages
 
     try {
-      const response = await axios.post('http://localhost:5000/users/signUp', {
+      const response = await axios.post('api/users/signUp', {
         name,
         email,
         password,

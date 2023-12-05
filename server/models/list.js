@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const superheroListSchema = new mongoose.Schema({
   listName: {
     type: String,

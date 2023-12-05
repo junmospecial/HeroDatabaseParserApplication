@@ -25,7 +25,7 @@ function UnauthUsers() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:5000/lists/public-favorite-lists')
+        axios.get('api/lists/public-favorite-lists')
             .then(response => {
                 console.log("Public Lists Response:", response.data); // Log the response
                 setPublicLists(response.data.map(list => ({ ...list, showDetails: false })));
@@ -48,8 +48,8 @@ function UnauthUsers() {
         if (selectedList && selectedList.showDetails && !publicListDetails[listName]) {
             setIsLoading(true);
             Promise.all([
-                axios.get(`http://localhost:5000/lists/favorite-lists/${listName}/superheroes/info`),
-                axios.get(`http://localhost:5000/lists/favorite-lists/${listName}/reviews`)
+                axios.get(`api/lists/favorite-lists/${listName}/superheroes/info`),
+                axios.get(`api/lists/favorite-lists/${listName}/reviews`)
             ])
             .then(([heroesResponse, reviewsResponse]) => {
                 setPublicListDetails({
@@ -89,11 +89,11 @@ function UnauthUsers() {
     // Modified searchSuperheroes function to include new search criteria
     const searchSuperheroes = () => {
         setIsLoading(true);
-        let url = `http://localhost:5000/superheroes/search?name=${encodeURIComponent(nameSearch)}&race=${encodeURIComponent(raceSearch)}&publisher=${encodeURIComponent(publisherSearch)}&power=${encodeURIComponent(powerSearch)}`;
+        let url = `api/superheroes/search?name=${encodeURIComponent(nameSearch)}&race=${encodeURIComponent(raceSearch)}&publisher=${encodeURIComponent(publisherSearch)}&power=${encodeURIComponent(powerSearch)}`;
         axios.get(url)
             .then(response => {
                 return Promise.all(response.data.map(id =>
-                    axios.get(`http://localhost:5000/superheroes/${id}`)
+                    axios.get(`api/superheroes/${id}`)
                 ));
             })
             .then(detailsResponses => {

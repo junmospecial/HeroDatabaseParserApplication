@@ -14,7 +14,7 @@ function Login() {
     setErrorMessage(''); // Clear any existing error messages
 
     try {
-      const response = await axios.post('http://localhost:5000/users/signIn', {
+      const response = await axios.post('api/users/signIn', {
         email,
         password,
       });

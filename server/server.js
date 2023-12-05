@@ -23,9 +23,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Use the routers
-app.use('/lists', listsRouter);
-app.use('/users', UserRouter);
-app.use('/superheroes', superheroesRouter);
+app.use('/api/lists', listsRouter);
+app.use('/api/users', UserRouter);
+app.use('/api/superheroes', superheroesRouter);
 
 // Serve static files from the 'client' directory
 app.use(express.static(path.join(__dirname, '../client')));

@@ -8,21 +8,10 @@ function PrivacyPolicy() {
     
     const navigate = useNavigate(); // Initialize navigate
 
-    useEffect(() => {
-        // Check if the user is logged in
-        if (!localStorage.getItem('userId')) {
-            // If not logged in, redirect to the login page
-            navigate('/signin');
-        }
-    }, []);
 
     const handleLogout = () => {
-        // Clear user data from local storage
-        localStorage.removeItem('name');
-        localStorage.removeItem('userId');
+        navigate('/');
 
-        // Navigate to the main page or login page after logging out
-        navigate('/signin');
     };
 
     return (

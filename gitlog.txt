@@ -1,0 +1,137 @@
+commit ee664ad046d23e3fe697cb454797e365cad8cd58
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:53:38 2023 -0500
+
+    css
+
+commit 962214cd41f0b6750dddf85afe49c21ff76f56bb
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:53:33 2023 -0500
+
+    admin page
+
+commit 0338fd89e4ba561ab8e32f5c8355b30b20e185fd
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:53:25 2023 -0500
+
+    verified html page
+
+commit c485e13be3a524c74c17dc5de15c692179f36826
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:53:17 2023 -0500
+
+    await verify
+
+commit e5a08df0f73ef8ac2c62210a57e56dcee8349abf
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:53:10 2023 -0500
+
+    disabled page
+
+commit cf83643dd18613411043e8c451f24958c20697f8
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:53:03 2023 -0500
+
+    email verification client
+
+commit 950a7989272d72c54c1944a89c4dced0a2f6222c
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:54 2023 -0500
+
+    herofinder
+
+commit 605a90bc95fac8d05ae72843f210d004f10c78a6
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:47 2023 -0500
+
+    login page
+
+commit 2eefe304767f2d3229e9df4661cd54afc1f33b0c
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:32 2023 -0500
+
+    privacy policy & dmca
+
+commit c05ae39c2e5f2f2aabcc669d4515e744dac83433
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:22 2023 -0500
+
+    sign up page
+
+commit 83117c8c093d7350d75f14fd059dc1017424c986
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:13 2023 -0500
+
+    uanauth users page
+
+commit bbbccd60869eff815b61f83d2d5d030c721a744b
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:52:04 2023 -0500
+
+    update password page
+
+commit eb3a0b92fe8bd415ec2707fa804b4295a8409ae9
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:51:52 2023 -0500
+
+    main page react
+
+commit 84c898dc1611a435d72530fe1767aea7f04313b3
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:51:29 2023 -0500
+
+    main server model
+
+commit d2750bedc81801605b39e576674f18f04de9f635
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:51:16 2023 -0500
+
+    lists schema
+
+commit ff8203ccbe3cbee965e90f95e04584be8d298f30
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:51:06 2023 -0500
+
+    Verification Model
+
+commit dd7abae9ae0abdd052429a01200a7208ae71c30d
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:50:56 2023 -0500
+
+    superheroes schema
+
+commit 9116d4d3f0bbbcbf0638565b07f8599a25921943
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:50:44 2023 -0500
+
+    superheroes route
+
+commit 53ab95b325c0911b2b645ad514973276f5f692a2
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:50:35 2023 -0500
+
+    users schema
+
+commit 5f6813c5448817ad322c4b1bdbe6de2a1dc96551
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:50:27 2023 -0500
+
+    users route
+
+commit e31654db2bbb77cb5b2e0b14ab0d30258b32d7cf
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:49:54 2023 -0500
+
+    lists
+
+commit f6ecbc5be17b91ef39eaad2ecc9d78a52e8b7a7d
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:23:08 2023 -0500
+
+    mongodb connection
+
+commit 524f6ab648e6efe53ea63f2e133ed30e25b09a6f
+Author: junmospecial <113631384+junmospecial@users.noreply.github.com>
+Date:   Sun Dec 3 23:20:06 2023 -0500
+
+    Create .gitignore

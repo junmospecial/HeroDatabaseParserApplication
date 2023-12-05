@@ -44,7 +44,7 @@ function HeroFinder() {
     }, []);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/lists/public-favorite-lists')
+        axios.get('api/lists/public-favorite-lists')
             .then(response => {
                 setPublicLists(response.data.map(list => ({ ...list, showDetails: false })));
             })
@@ -55,11 +55,11 @@ function HeroFinder() {
 
     const searchSuperheroes = () => {
         setIsLoading(true);
-        let url = `http://localhost:5000/superheroes/search?name=${encodeURIComponent(nameSearch)}&race=${encodeURIComponent(raceSearch)}&publisher=${encodeURIComponent(publisherSearch)}&power=${encodeURIComponent(powerSearch)}`;
+        let url = `api/superheroes/search?name=${encodeURIComponent(nameSearch)}&race=${encodeURIComponent(raceSearch)}&publisher=${encodeURIComponent(publisherSearch)}&power=${encodeURIComponent(powerSearch)}`;
         axios.get(url)
             .then(response => {
                 return Promise.all(response.data.map(id => 
-                    axios.get(`http://localhost:5000/superheroes/${id}`)
+                    axios.get(`api/superheroes/${id}`)
                 ));
             })
             .then(detailsResponses => {
@@ -88,7 +88,7 @@ function HeroFinder() {
     };
 
     const postReview = () => {
-        axios.post(`http://localhost:5000/lists/favorite-lists/${reviewListName}/reviews`, {
+        axios.post(`api/lists/favorite-lists/${reviewListName}/reviews`, {
           reviewerName: username,
           comment: reviewComment,
           rating: reviewRating,
@@ -126,8 +126,8 @@ function HeroFinder() {
                 if (showDetails && !publicListDetails[listName]) {
                     // Fetch list details if not already fetched
                     Promise.all([
-                        axios.get(`http://localhost:5000/lists/favorite-lists/${listName}/superheroes/info`),
-                        axios.get(`http://localhost:5000/lists/favorite-lists/${listName}/reviews`)
+                        axios.get(`api/lists/favorite-lists/${listName}/superheroes/info`),
+                        axios.get(`api/lists/favorite-lists/${listName}/reviews`)
                     ])
                     .then(([heroesResponse, reviewsResponse]) => {
                         setPublicListDetails({
@@ -183,7 +183,7 @@ function HeroFinder() {
     const getListInfo = () => {
         const userId = localStorage.getItem('userId'); // Get the user ID from local storage
         setIsLoading(true);
-        axios.get(`http://localhost:5000/lists/favorite-lists/${encodeURIComponent(currentListName)}/superheroes/info`, {
+        axios.get(`api/lists/favorite-lists/${encodeURIComponent(currentListName)}/superheroes/info`, {
             params: { userId }, // Send userId as a query parameter
 
         })
@@ -349,7 +349,7 @@ const renderPublicLists = () => {
 
 const fetchLists = () => {
     const userId = localStorage.getItem('userId'); // Get user ID from local storage
-    axios.get('http://localhost:5000/lists/favorite-lists', {
+    axios.get('api/lists/favorite-lists', {
         params: { userId } // Send userId as a query parameter
     })
     .then(response => {
@@ -367,7 +367,7 @@ const fetchLists = () => {
     const createNewList = (listName) => {
         const userId = localStorage.getItem('userId'); // Get user ID from local storage
         const userName = localStorage.getItem('name')
-        axios.post('http://localhost:5000/lists/favorite-lists', {
+        axios.post('api/lists/favorite-lists', {
             listName,
             isPublic: isListPublic,
             userId ,// Send userId in the body of the request
@@ -388,7 +388,7 @@ const fetchLists = () => {
     
 // New function to update list's public status
 const updateListPublicStatus = (listName, newStatus) => {
-    axios.put(`http://localhost:5000/lists/favorite-lists/${listName}/update-status`, { isPublic: newStatus })
+    axios.put(`api/lists/favorite-lists/${listName}/update-status`, { isPublic: newStatus })
         .then(() => {
             fetchLists();
             setSuccessMessage(`List "${listName}" public status updated successfully!`);
@@ -402,7 +402,7 @@ const updateListPublicStatus = (listName, newStatus) => {
 
 const deleteHeroFromList = () => {
     const userId = localStorage.getItem('userId'); // Get user ID from local storage
-    axios.delete(`http://localhost:5000/lists/favorite-lists/${currentListName}/superheroes/${selectedHeroId}`, {
+    axios.delete(`api/lists/favorite-lists/${currentListName}/superheroes/${selectedHeroId}`, {
         data: { userId } // Send userId in the body of the request
     })
     .then(() => {
@@ -431,7 +431,7 @@ const deleteHeroFromList = () => {
             return;
         }
         const userId = localStorage.getItem('userId'); // Get user ID from local storage
-        axios.put(`http://localhost:5000/lists/favorite-lists/${currentListName}`, {
+        axios.put(`api/lists/favorite-lists/${currentListName}`, {
             superheroIds: [heroIdInt],
             userId // Send userId in the body of the request
         })
@@ -455,7 +455,7 @@ const deleteHeroFromList = () => {
     
     const deleteList = (listName) => {
         const userId = localStorage.getItem('userId'); // Get user ID from local storage
-        axios.delete(`http://localhost:5000/lists/favorite-lists/${listName}`, {
+        axios.delete(`api/lists/favorite-lists/${listName}`, {
             data: { userId } // Send userId in the body of the request for DELETE
         })
         .then(() => {

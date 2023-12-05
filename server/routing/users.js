@@ -177,7 +177,7 @@ const sendVerificationEmail = ({_id, email}, res) => {
         from: process.env.AUTH_EMAIL,
         to: email,
         subject: "Verify Your Email",
-        html: `<p>Verify your email address to complete signup and log into your account.</p><p>This link <b>expires in 6 hours</b>.</p><p>Press <a href="${currentURL + "users/verify/" +_id+ "/"  + uniqueString}>here</a> to proceed.</p>`,
+        html: `<p>Verify your email address to complete signup and log into your account.</p><p>This link <b>expires in 6 hours</b>.</p><p>Press <a href="${currentURL + "api/users/verify/" +_id+ "/"  + uniqueString}>here</a> to proceed.</p>`,
 
 
 
@@ -332,12 +332,12 @@ router.get('/verify/:userId/:uniqueString', (req,res) => {
         })
 });
 
-//Verified page route
-router.get("/verified",(req,res) =>{
-    res.sendFile(path.join(__dirname, './../../client/verified.html'))
+    //Verified page route
+    router.get("/verified",(req,res) =>{
+        res.sendFile(path.join(__dirname, './../../client/verified.html'))
 
 
-})
+    })
 
 // Route to change password
 router.post('/changePassword', async (req, res) => {

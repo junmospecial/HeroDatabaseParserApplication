@@ -228,6 +228,7 @@ router.delete('/favorite-lists/:listName', async (req, res) => {
     if (list.userId.toString() !== userId) {
       return res.status(403).send('Unauthorized to delete this list.');
     }
+    await SuperheroList.deleteOne({ listName });
     res.send(`List '${listName}' has been deleted.`);
   } catch (error) {
     console.error('Server Error:', error);

@@ -36,7 +36,7 @@
         // Function to fetch users
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/users/users');
+                const response = await axios.get('api/users/users');
                 console.log(response.data.data); // Log to see the structure
                 setUsers(response.data.data);
             } catch (error) {
@@ -47,7 +47,7 @@
         // Function to fetch public lists
         const fetchPublicLists = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/lists/public-favorite-lists');
+                const response = await axios.get('api/lists/public-favorite-lists');
                 setPublicLists(response.data.map(list => ({ ...list, showDetails: false })));
             } catch (error) {
                 console.error('Error fetching public lists:', error);
@@ -69,8 +69,8 @@
             if (selectedList && selectedList.showDetails && !publicListDetails[listName]) {
                 setIsLoading(true);
                 Promise.all([
-                    axios.get(`http://localhost:5000/lists/favorite-lists/${listName}/superheroes/info`),
-                    axios.get(`http://localhost:5000/lists/favorite-lists/${listName}/reviews/admin`)
+                    axios.get(`api/lists/favorite-lists/${listName}/superheroes/info`),
+                    axios.get(`api/lists/favorite-lists/${listName}/reviews/admin`)
                 ])
                 .then(([heroesResponse, reviewsResponse]) => {
                     setPublicListDetails({
@@ -206,7 +206,7 @@
             const adminUserId = localStorage.getItem('userId'); // Admin user ID
             
             try {
-                const response = await axios.put(`http://localhost:5000/users/toggle-user-disabled/${userId}`, {
+                const response = await axios.put(`api/users/toggle-user-disabled/${userId}`, {
                     userId: adminUserId // Send the admin user ID in the request body
                 });
                 console.log(response.data);
@@ -230,7 +230,7 @@
             const adminUserId = localStorage.getItem('userId'); // Admin user ID
 
             try {
-                const response = await axios.put(`http://localhost:5000/users/grantadmin/${userId}`, {
+                const response = await axios.put(`api/users/grantadmin/${userId}`, {
                     userId: adminUserId // Send the admin user ID in the request body
                 });
                 console.log(response.data);
@@ -250,7 +250,7 @@
             const adminUserId = localStorage.getItem('userId'); // Retrieve user ID from localStorage
         
             try {
-                const response = await axios.post(`http://localhost:5000/lists/favorite-lists/${listName}/reviews/${reviewId}/toggle`, {
+                const response = await axios.post(`api/lists/favorite-lists/${listName}/reviews/${reviewId}/toggle`, {
                     userId: adminUserId // Send the user ID in the request body
                 });
                 console.log(response.data);

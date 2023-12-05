@@ -14,7 +14,7 @@ function UpdatePassword() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/users/changePassword', {
+      const response = await axios.post('api/users/changePassword', {
         userId,
         currentPassword,
         newPassword
